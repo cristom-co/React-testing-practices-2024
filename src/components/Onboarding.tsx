@@ -1,6 +1,8 @@
 import { Button } from "@radix-ui/themes";
 import { useState } from "react";
 
+import TermsAndConditions from "./TermsAndConditions";
+
 function Onboarding() {
   const [isTutorialCompleted, setTutorialCompleted] = useState(
     localStorage.getItem("tutorialCompleted") === "true"
@@ -17,6 +19,7 @@ function Onboarding() {
         <div>
           <h1>Welcome back!</h1>
           <p>You've already completed the tutorial.</p>
+          <TermsAndConditions />
         </div>
       ) : (
         <div>
